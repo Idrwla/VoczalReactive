@@ -1,0 +1,31 @@
+<h3>Add railway carriage</h3>
+<form [formGroup]="model">
+  <div>
+    <mat-form-field>
+      <mat-label>Номер вагона</mat-label>
+      <input matInput formControlName="id">
+      <mat-error *ngIf="model.invalid">{{errorMessage}}</mat-error>
+      <span style="color: red;font-size: 11px" *ngIf="errorMessage"> {{errorMessage}}</span>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-label>Наименование вагона</mat-label>
+      <input matInput formControlName="name">
+      <mat-error *ngIf="model.invalid">Проверте правильность заполнение!</mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-label>Состояние</mat-label>
+      <mat-select formControlName="state">
+        <mat-option value="Рабочий">Рабочий</mat-option>
+        <mat-option value="Неисправный">Неисправный</mat-option>
+        <mat-option value="В ремонте">В ремоне</mat-option>
+      </mat-select>
+      <mat-error *ngIf="model.invalid">Выберите один из вариантов</mat-error>
+    </mat-form-field>
+  </div>
+  <button (click)="submit()" mat-raised-button color="primary" >Добавить</button>
+</form>
+

@@ -1,0 +1,21 @@
+<h3>Exist railway carriage</h3>
+<table>
+
+  <tr>
+    <th>Number</th>
+    <th>Name</th>
+    <th>State</th>
+    <th>Type</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+
+      <tr *ngFor="let i of dataSource">
+        <td>{{i.id}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.state}}</td>
+        <td>{{i.type}}</td>
+        <td><button (click)="edit(i.id)"><mat-icon>edit</mat-icon></button></td>
+        <td><button (click)="delete(i.id)"><mat-icon>delete</mat-icon></button></td>
+      </tr>
+</table>

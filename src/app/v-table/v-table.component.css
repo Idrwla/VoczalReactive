@@ -1,0 +1,27 @@
+table {
+  width: 100%;
+  border-width: 2px;
+  border-style: solid;
+  border-color: purple;
+  border-collapse: collapse;
+  background-color: white;
+  /*color: white;*/
+  position: relative;
+  left: -20px;
+  /*top: -144px;*/
+
+
+}
+th,td{
+  width: 100px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: purple;
+  child-align: middle;
+  align-items: center;
+  text-align: center;
+}
+h3{
+  position: relative;
+
+}
